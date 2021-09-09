@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "doc": "typedoc src/index.ts",
+    "build": "typedoc src/index.ts",
+    "watch": "chokidar \"src/**/*.ts\" -c \"npm run build\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,6 +18,9 @@
   },
   "homepage": "https://github.com/evergreen-trading-systems/nep-ts#readme",
   "devDependencies": {
+    "chokidar-cli": "^3.0.0",
+    "nodemon": "^2.0.12",
+    "tsc-watch": "^4.5.0",
     "typedoc": "^0.21.9",
     "typescript": "^4.4.2"
   },

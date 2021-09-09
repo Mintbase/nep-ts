@@ -85,105 +85,103 @@ export namespace ProposalBatch {
 }
 
 export namespace ApprovalManagement {
-    /******************/
-    /* CHANGE METHODS */
-    /******************/
 
-// Add an approved account for a specific token.
-//
-// Requirements
-// * Caller of the method must attach a deposit of at least 1 yoctoⓃ for
-//   security purposes
-// * Contract MAY require caller to attach larger deposit, to cover cost of
-//   storing approver data
-// * Contract MUST panic if called by someone other than token owner
-// * Contract MUST panic if addition would cause `nft_revoke_all` to exceed
-//   single-block gas limit. See below for more info.
-// * Contract MUST increment approval ID even if re-approving an account
-// * If successfully approved or if had already been approved, and if `msg` is
-//   present, contract MUST call `nft_on_approve` on `account_id`. See
-//   `nft_on_approve` description below for details.
-//
-// Arguments:
-// * `token_id`:
-// * `account_id`:
-// * `msg`:
-//
-// Returns void, if no `msg` given. Otherwise, returns promise call to
-// `nft_on_approve`, which can resolve with whatever it wants.
     /**
      * Add an approved account for a specific token.
-     *
-     * Requirements
-     *
-     * - he
-     * - h2
-     * @param token_id the token for which to add an approval
-     * @param account_id the account to add to `approvals`
-     * @param msg optional string to be passed to `nft_on_approve`
      */
-    export function nft_approve(
-        token_id: string,
-        account_id: string,
-        msg: string|null,
-    ): void|Promise<any> {}
+    export interface nft_approve {
+        /**
+         * Requirements:
+         *
+         * Caller of the method must attach a deposit of at least 1 yoctoⓃ for
+         * security purposes
+         *
+         * Contract MAY require caller to attach larger deposit, to cover cost of
+         * storing approver data
+         *
+         * Contract MUST panic if called by someone other than token owner
+         *
+         * Contract MUST panic if addition would cause `nft_revoke_all` to exceed
+         * single-block gas limit. See below for more info.
+         *
+         * Contract MUST increment approval ID even if re-approving an account
+         *
+         * If successfully approved or if had already been approved, and if `msg` is
+         * present, contract MUST call `nft_on_approve` on `account_id`. See
+         * `nft_on_approve` description below for details.
+         * @category change method
+         * @param token_id the token for which to add an approval
+         * @param account_id the account to add to `approvals`
+         * @param msg optional string to be passed to `nft_on_approve`
+         */
+        (
+            token_id: string,
+            account_id: string,
+            msg: string|null,
+        ):void|Promise<any>
+    }
 
-// Revoke an approved account for a specific token.
-//
-// Requirements
-// * Caller of the method must attach a deposit of 1 yoctoⓃ for security
-//   purposes
-// * If contract requires >1yN deposit on `nft_approve`, contract
-//   MUST refund associated storage deposit when owner revokes approval
-// * Contract MUST panic if called by someone other than token owner
-//
-// Arguments:
-// * `token_id`: the token for which to revoke an approval
-// * `account_id`: the account to remove from `approvals`
-    export function nft_revoke(
-        token_id: string,
-        account_id: string
-    ) {}
 
-// Revoke all approved accounts for a specific token.
-//
-// Requirements
-// * Caller of the method must attach a deposit of 1 yoctoⓃ for security
-//   purposes
-// * If contract requires >1yN deposit on `nft_approve`, contract
-//   MUST refund all associated storage deposit when owner revokes approvals
-// * Contract MUST panic if called by someone other than token owner
-//
-// Arguments:
-// * `token_id`: the token with approvals to revoke
-    export function nft_revoke_all(token_id: string) {}
+    /**
+     * Revoke an approved account for a specific token.
+     */
+    export interface nft_revoke {
+        /**
+         * Requirements
+         *
+         * - Caller of the method must attach a deposit of 1 yoctoⓃ for security purposes
+         * - If contract requires >1yN deposit on `nft_approve`, contract
+         * MUST refund all associated storage deposit when owner revokes approvals
+         * - Contract MUST panic if called by someone other than token owner
+         * @category change method
+         * @param token_id the token for which to revoke an approval
+         * @param account_id the account to remove from `approvals`
+         */
+        (
+            token_id: string,
+            account_id: string
+        ):void
+    }
 
-    /****************/
-    /* VIEW METHODS */
-    /****************/
 
-// Check if a token is approved for transfer by a given account, optionally
-// checking an approval_id
-//
-// Arguments:
-// * `token_id`: the token for which to revoke an approval
-// * `approved_account_id`: the account to check the existence of in `approvals`
-// * `approval_id`: an optional approval ID to check against current approval ID for given account
-//
-// Returns:
-// if `approval_id` given, `true` if `approved_account_id` is approved with given `approval_id`
-// otherwise, `true` if `approved_account_id` is in list of approved accounts
-    export interface nft_is_approveda {
+    /**
+     * Revoke all approved accounts for a specific token.
+     */
+    export interface nft_revoke_all {
+        /**
+         * Requirements
+         *
+         * - Caller of the method must attach a deposit of 1 yoctoⓃ for security purposes
+         * - If contract requires >1yN deposit on `nft_approve`, contract
+         * MUST refund all associated storage deposit when owner revokes approvals
+         * - Contract MUST panic if called by someone other than token owner
+         * @category change method
+         * @param token_id the token with approvals to revoke
+         */
+        (token_id: string):void
+    }
+
+
+    /**
+     * Check if a token is approved for transfer by a given account, optionally
+     * checking an approval_id
+     */
+    export interface nft_is_approved {
+        /**
+         *
+         * @category view method
+         * @param token_id the token for which to revoke an approval
+         * @param approved_account_id the account to check the existence of in `approvals`
+         * @param approval_id an optional approval ID to check against current approval ID for given account
+         * @return {boolean}
+         * if `approval_id` given, `true` if `approved_account_id` is approved with given `approval_id`
+         * otherwise, `true` if `approved_account_id` is in list of approved accounts
+         */
         (
             token_id: string,
             approved_account_id: string,
             approval_id: number|null
         ): boolean
     }
-    export function nft_is_approved(
-        token_id: string,
-        approved_account_id: string,
-        approval_id: number|null
-    ): boolean {return true}
 }
 
