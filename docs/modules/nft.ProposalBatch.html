@@ -1,0 +1,269 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>ProposalBatch | nep-ts</title>
+	<meta name="description" content="Documentation for nep-ts">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+	<script async src="../assets/js/search.js" id="search-script"></script>
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">nep-ts</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../modules.html">nep-ts</a>
+				</li>
+				<li>
+					<a href="nft.html">nft</a>
+				</li>
+				<li>
+					<a href="nft.ProposalBatch.html">ProposalBatch</a>
+				</li>
+			</ul>
+			<h1>Namespace ProposalBatch</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Interfaces</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-interface tsd-parent-kind-namespace"><a href="../interfaces/nft.ProposalBatch.RoyaltyArgs.html" class="tsd-kind-icon">Royalty<wbr>Args</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-namespace"><a href="../interfaces/nft.ProposalBatch.SplitOwners.html" class="tsd-kind-icon">Split<wbr>Owners</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="nft.ProposalBatch.html#nft_batch_burn" class="tsd-kind-icon">nft_<wbr>batch_<wbr>burn</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="nft.ProposalBatch.html#nft_batch_mint" class="tsd-kind-icon">nft_<wbr>batch_<wbr>mint</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="nft.ProposalBatch.html#nft_batch_transfer" class="tsd-kind-icon">nft_<wbr>batch_<wbr>transfer</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="nft_batch_burn" class="tsd-anchor"></a>
+					<h3>nft_<wbr>batch_<wbr>burn</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">nft_<wbr>batch_<wbr>burn<span class="tsd-signature-symbol">(</span>token_ids<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/evergreen-trading-systems/nep-ts/blob/master/src/nft.ts#L81">nft.ts:81</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>The token will be permanently removed from this contract.
+									Burn each token_id in <code>token_ids</code>.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>token_ids: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="nft_batch_mint" class="tsd-anchor"></a>
+					<h3>nft_<wbr>batch_<wbr>mint</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">nft_<wbr>batch_<wbr>mint<span class="tsd-signature-symbol">(</span>owner_id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, num_to_mint<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, royalty_args<span class="tsd-signature-symbol">: </span><a href="../interfaces/nft.ProposalBatch.RoyaltyArgs.html" class="tsd-signature-type" data-tsd-kind="Interface">RoyaltyArgs</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span>, split_owners<span class="tsd-signature-symbol">: </span><a href="../interfaces/nft.ProposalBatch.SplitOwners.html" class="tsd-signature-type" data-tsd-kind="Interface">SplitOwners</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/evergreen-trading-systems/nep-ts/blob/master/src/nft.ts#L54">nft.ts:54</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Mint a number of tokens for <code>owner_id</code> with optional royalty and split ownership shares.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>owner_id: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>&quot;owner.near&quot;</p>
+									</div>
+								</li>
+								<li>
+									<h5>num_to_mint: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>10</p>
+									</div>
+								</li>
+								<li>
+									<h5>royalty_args: <a href="../interfaces/nft.ProposalBatch.RoyaltyArgs.html" class="tsd-signature-type" data-tsd-kind="Interface">RoyaltyArgs</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<pre><code class="language-json"><span style="color: #000000">{</span><span style="color: #0451A5">&quot;split_between&quot;</span><span style="color: #000000">:{</span><span style="color: #0451A5">&quot;royalty1.near&quot;</span><span style="color: #000000">:</span><span style="color: #098658">1275</span><span style="color: #000000">,</span><span style="color: #0451A5">&quot;royalty2&quot;</span><span style="color: #000000">:</span><span style="color: #098658">8750</span><span style="color: #000000">},</span><span style="color: #0451A5">&quot;percentage&quot;</span><span style="color: #000000">:</span><span style="color: #A31515">&quot;10000&quot;</span><span style="color: #000000">}</span>
+</code></pre>
+										<p>royalty1 = <code>12.5%</code></p>
+										<p>royalty2 =  <code>87.5%</code></p>
+									</div>
+								</li>
+								<li>
+									<h5>split_owners: <a href="../interfaces/nft.ProposalBatch.SplitOwners.html" class="tsd-signature-type" data-tsd-kind="Interface">SplitOwners</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<pre><code class="language-json"><span style="color: #000000">{</span><span style="color: #0451A5">&quot;co.owner.near&quot;</span><span style="color: #000000">:</span><span style="color: #098658">5000</span><span style="color: #000000">}</span>
+</code></pre>
+										<p><code>owner_id</code> = <code>50%</code></p>
+										<p><code>co.owner.id</code> = <code>50%</code></p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="nft_batch_transfer" class="tsd-anchor"></a>
+					<h3>nft_<wbr>batch_<wbr>transfer</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">nft_<wbr>batch_<wbr>transfer<span class="tsd-signature-symbol">(</span>token_ids<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/evergreen-trading-systems/nep-ts/blob/master/src/nft.ts#L72">nft.ts:72</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Transfer 2d array of tokens mapped to destination accounts</p>
+								</div>
+								<p>Caller of the method must attach a deposit of 1 yoctoⓃ for security purposes</p>
+								<p>Contract MUST panic if called by someone other than token owner</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>token_ids: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<pre><code class="language-json"><span style="color: #000000">[ [</span><span style="color: #A31515">&quot;1&quot;</span><span style="color: #000000">,</span><span style="color: #A31515">&quot;account.near&quot;</span><span style="color: #000000">], [</span><span style="color: #A31515">&quot;2&quot;</span><span style="color: #000000">,</span><span style="color: #A31515">&quot;account2.near&quot;</span><span style="color: #000000">] ]</span>
+</code></pre>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="../modules.html">Exports</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="nft.html">nft</a>
+					</li>
+					<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+						<a href="nft.ApprovalManagement.html">nft.<wbr>Approval<wbr>Management</a>
+					</li>
+					<li class="current tsd-kind-namespace tsd-parent-kind-namespace">
+						<a href="nft.ProposalBatch.html">nft.<wbr>Proposal<wbr>Batch</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="../interfaces/nft.ProposalBatch.RoyaltyArgs.html" class="tsd-kind-icon">Royalty<wbr>Args</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="../interfaces/nft.ProposalBatch.SplitOwners.html" class="tsd-kind-icon">Split<wbr>Owners</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="nft.ProposalBatch.html#nft_batch_burn" class="tsd-kind-icon">nft_<wbr>batch_<wbr>burn</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="nft.ProposalBatch.html#nft_batch_mint" class="tsd-kind-icon">nft_<wbr>batch_<wbr>mint</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="nft.ProposalBatch.html#nft_batch_transfer" class="tsd-kind-icon">nft_<wbr>batch_<wbr>transfer</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
